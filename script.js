@@ -10,15 +10,19 @@ const MAN = document.getElementById('man');
 const DIA = document.getElementById('dia');
 
 CALCULAR.addEventListener('click', () => {
+    FLU.style.display = 'none';
+    MAN.style.display = 'none';
+    ERROR.style.display = 'none';
+    DIA.style.display = 'none';
+
     let peso = document.getElementById("peso").valueAsNumber;
     if (peso > 0){
-        // console.log("estoy aqui")
         calcularPeso(peso)
-        
     }else{
         ERROR.style.display = 'block';
         FLU.style.display = 'none';
         MAN.style.display = 'none';
+        DIA.style.display = 'none';
     }
 });
 
